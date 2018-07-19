@@ -4,6 +4,11 @@ deezer-test-payment
 
 J'ai retenu le choix d'une base postegres et d'un projet symfony pour ce projet
 
+Instalation de la base de donnée:
+
+createdb deezer-payment
+psql -U "user" deezer-payment -p 5432 
+
 Le script pour créer la base se trouve dans rollout/create_table.sql
 
 Ce test necessite l'utilisation d'un rabbitMQ pour valider la partie asynchrone de l'énnoncé
@@ -25,6 +30,9 @@ Pour construire automatiquement les queues et les exchanges, nous pouvons envoye
 depuis une action symfony
 
 Dans notre cas il faut lancer le serveur web intégré de symfony a la racine du projet
+
+composer install
+
 php bin/console server:start 
 
 Puis depuis un navigateur aller sur 
