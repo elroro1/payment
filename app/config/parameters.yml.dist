@@ -1,0 +1,19 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host: 127.0.0.1
+    database_port: 5432
+    database_name: deezer-payment
+    database_user: rfockking
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: a362fa2d6f8638b308c761f2b306fb53de53060b
+    rabbit_host: 127.0.0.1
+    rabbit_port: 5672
+    rabbit_management_port: 15672
+    rabbit_user: guest
+    rabbit_password: guest

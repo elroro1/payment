@@ -1,0 +1,52 @@
+App\Entity\DeezerPayment.transaction:
+    type: entity
+    table: deezer_payment.transaction
+    indexes:
+        IDX_CDB59BA37B00651C:
+            columns:
+                - status
+    id:
+        transactionId:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+            id: true
+            column: transaction_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        dateCreate:
+            type: datetimetz
+            nullable: false
+            options:
+                default: now()
+            column: date_create
+        dateUpdate:
+            type: datetimetz
+            nullable: true
+            column: date_update
+        dateAuthorized:
+            type: datetimetz
+            nullable: true
+            column: date_authorized
+        dateCaptured:
+            type: datetimetz
+            nullable: true
+            column: date_captured
+        dateSettled:
+            type: datetimetz
+            nullable: true
+            column: date_settled
+        dateUnpaid:
+            type: datetimetz
+            nullable: true
+            column: date_unpaid
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+
+    lifecycleCallbacks: {  }

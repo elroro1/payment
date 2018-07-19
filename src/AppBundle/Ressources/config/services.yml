@@ -1,0 +1,10 @@
+services:
+    app.model.transaction:
+        class:  AppBundle\Model\TransactionModel
+        arguments: @doctrine.orm.entity_manager
+
+    app.model.notification:
+        class:  AppBundle\Model\NotificationModel
+        arguments: @doctrine.orm.entity_manager
+
+

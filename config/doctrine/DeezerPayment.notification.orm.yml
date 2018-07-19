@@ -1,0 +1,31 @@
+App\Entity\DeezerPayment.notification:
+    type: entity
+    table: deezer_payment.notification
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        transactionId:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+            column: transaction_id
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        date:
+            type: datetimetz
+            nullable: false
+            options:
+                default: now()
+    lifecycleCallbacks: {  }
